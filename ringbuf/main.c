@@ -1,10 +1,9 @@
 #include <stdio.h>
 #include <stdlib.h>
-#include <windows.h>
 #include "ringbuffer.h"
 
-extern void RingBuf_Write(int* data);//向缓冲区写入一个字节
-extern unsigned char RingBuf_Read(int* pData);//读取缓冲区一个字节的数据
+
+ringBuffer_t buffer = {0,0,{0}};
 
 int main()
 {
@@ -21,12 +20,15 @@ int main()
     RingBuf_Write(Writebuf2);
     RingBuf_Write(Writebuf3);
 
-    fd=RingBuf_Read(Readbuf1);   
-    printf("Readbuf1  fd is %d\n",fd);
-    fd=RingBuf_Read(Readbuf2);   
-    printf("Readbuf2  fd is %d\n",fd);
-    fd=RingBuf_Read(Readbuf3);   
-    printf("Readbuf3  fd is %d\n",fd);
-
+    // fd=RingBuf_Read(Readbuf1);   
+    // printf("Readbuf1  fd is %d\n",fd);
+    // fd=RingBuf_Read(Readbuf2);   
+    // printf("Readbuf2  fd is %d\n",fd);
+    // fd=RingBuf_Read(Readbuf3);   
+    // printf("Readbuf3  fd is %d\n",fd);
+    // printf("----------------------\n");
+    // printf("Readbuf1   is %s\n",Readbuf1);
+    // printf("Readbuf2   is %s\n",Readbuf2);
+    // printf("Readbuf3   is %s\n",Readbuf3);
     return 0;
 }

@@ -7,7 +7,6 @@
             "args": [
                 "-g",
                 "${file}",
-                "${fileDirname}..\\ringbuf\\ringbuffer.c",
                 "-o",
                 "${fileDirname}\\${fileBasenameNoExtension}.exe"
             ],
